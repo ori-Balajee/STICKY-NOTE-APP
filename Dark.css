@@ -1,0 +1,119 @@
+/* Light & Dark Mode */
+.light {
+    background-color: #f0f0f0;
+    color: #111;
+    transition: all 0.3s ease;
+}
+
+.dark {
+    background-color: #121212;
+    color: #eee;
+    transition: all 0.3s ease;
+}
+
+/* Body */
+.body-replace {
+    font-family: 'Arial Black', 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    padding-top: 0px;
+   
+}
+
+/* Container */
+.container {
+    width: 750px;
+    text-align: center;
+    position: relative;
+}
+
+/* Add Note Button */
+#addNoteBtn {
+    padding: 12px 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #ff0080, #7928ca);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(255,0,128,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#addNoteBtn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255,0,128,0.7);
+}
+
+/* Notes Container */
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Note */
+.note {
+    background-color: #1f1f1f;
+    width: 160px;
+    min-height: 160px;
+    padding: 15px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.5);
+    border-left: 5px solid #ff0080; /* edgy highlight */
+    transform: rotate(-3deg); /* slight tilt */
+    transition: transform 0.2s, box-shadow 0.2s, border-left-color 0.2s;
+    cursor: grab;
+}
+
+.note:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 10px 15px 25px rgba(255,0,128,0.4);
+    border-left-color: #ff4ec0;
+}
+
+/* Textarea inside note */
+.note textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    resize: none;
+    outline: none;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+}
+
+/* Delete Button */
+.deleteBtn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: #ff0044;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 12px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.deleteBtn:hover {
+    transform: scale(1.2);
+    background-color: #ff3366;
+}
+
+/* Random rotations for edgier chaos */
+.note:nth-child(3n) { transform: rotate(-5deg); }
+.note:nth-child(4n) { transform: rotate(3deg); }
+.note:nth-child(5n) { transform: rotate(-2deg); }
+.note:nth-child(6n) { transform: rotate(4deg); }
